@@ -5,8 +5,10 @@ representations: Posit, IEEE 754-like floating point, Logarithmic Number System 
 and Takum. All computation runs client-side in JavaScript. There is no build step and
 no server-side dependency beyond PHP includes for shared navigation.
 
-Live tools: https://posithub.org/widget/lookup and https://posithub.org/widget/plookup
-(Posit lookup and decimal converter, hosted by PositHub.)
+The Posit lookup and decimal converter tools originate from work by Siew Hoon Leong
+(Cerlane), 2017. Live tools (Cerlane): https://posithub.org/widget/lookup and https://posithub.org/widget/plookup (Posit lookup and decimal converter, hosted by PositHub.) 
+
+This project extends those tools and adds support for Float, LNS, and Takum formats along with the analysis pages.
 
 ---
 
@@ -283,9 +285,6 @@ To cite this project:
 }
 ```
 
-The Posit lookup and decimal converter tools originate from work by Siew Hoon Leong
-(Cerlane), 2017, available at https://posithub.org. This project extends those tools
-and adds support for Float, LNS, and Takum formats along with the analysis pages.
 
 Takum format reference:
 
