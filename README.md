@@ -231,6 +231,7 @@ js/
   takumlookup.js          Takum encode / decode
   positlookup.js          Posit decode
   decimallookupv2.js      Decimal-to-posit converter
+  analysishelpers.js      Shared Posit/Takum encode helpers and fmtAdd (analysis pages)
 
 Lookup tables:
   flookup.php             Float bit-pattern table
