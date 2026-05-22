@@ -38,8 +38,8 @@ Standard sign-exponent-mantissa layout: `s | eee... | mmm...` with bias = 2^(E-1
 subnormal numbers, +/-0, +/-Inf, and NaN. The exponent width E and mantissa width M are
 configurable.
 
-Preset configurations: E1M2, E2M1, E2M3, E3M2, E3M4, **E4M3**, **E5M2**, E2M5,
-**FP16** (E5M10), **BF16** (E8M7).
+Preset configurations: E1M2, E2M1, E2M3, E3M2, E3M4, E4M3, E5M2, E2M5,
+FP16 (E5M10), BF16 (E8M7).
 
 JavaScript: `js/floatlookup.js`
 
@@ -114,25 +114,25 @@ Most pages include a toggle to switch to their 16-bit counterparts.
 
 ### Closure
 
-**`closureplot.php`** — Heatmaps showing when a op b produces a non-finite or special
+**`closureplot.php`** - Heatmaps showing when a op b produces a non-finite or special
 result for all pairs (a, b) in each format. Illustrates how Posit and Takum saturate
 (closed arithmetic) while Float and LNS can overflow to Inf.
 
 ### Associativity
 
-**`assocplot.php`** — Scatter plots and error histograms comparing (a+b)+c against
+**`assocplot.php`** - Scatter plots and error histograms comparing (a+b)+c against
 a+(b+c) across all four formats. Quantifies rounding-order dependence for random
 triple combinations.
 
 ### Error Accumulation
 
-**`accumplot.php`** — Repeated addition of the geometric series sum(1/2^k). Shows
+**`accumplot.php`** - Repeated addition of the geometric series sum(1/2^k). Shows
 the step at which each format's precision is exhausted and the accumulated error
 becomes constant.
 
 ### Dot Product Accuracy
 
-**`dotprodplot.php`** — Mean relative error of a dot b versus the exact float64 result,
+**`dotprodplot.php`** - Mean relative error of a dot b versus the exact float64 result,
 for random vectors of increasing length L = 1 to 64. Three error metrics are available:
 
 - Standard relative error: |est - exact| / exact
@@ -141,13 +141,13 @@ for random vectors of increasing length L = 1 to 64. Three error metrics are ava
 
 ### Dynamic Range vs. Precision
 
-**`rangeplot.php`** — Scatter plot placing each 8-bit format variant at the coordinates
+**`rangeplot.php`** - Scatter plot placing each 8-bit format variant at the coordinates
 (dynamic range in decades, -log10(machine epsilon)). Visualises the fundamental
 range-precision tradeoff within a fixed bit budget.
 
 ### Format Comparison Table
 
-**`formatcompare.php`** — Side-by-side table covering Float, Posit (8-bit and 16-bit),
+**`formatcompare.php`** - Side-by-side table covering Float, Posit (8-bit and 16-bit),
 Takum (linear and logarithmic, 8-bit and 16-bit), and LNS configurations. Columns:
 bit width, minimum positive value, maximum value, dynamic range (decades), machine
 epsilon near 1, total finite representable values, special values present, and whether
@@ -155,7 +155,7 @@ the format is closed under addition and multiplication.
 
 ### Harmonic Series Stagnation
 
-**`harmonicplot.php`** — Accumulates H_N = 1 + 1/2 + 1/3 + ... + 1/N in each format
+**`harmonicplot.php`** - Accumulates H_N = 1 + 1/2 + 1/3 + ... + 1/N in each format
 by in-format left-to-right addition. Because terms shrink while the running sum grows,
 addition eventually has no effect. The stagnation point N* is the last term that changes
 the sum; beyond it the format is permanently frozen. The table reports N*, the frozen
@@ -163,7 +163,7 @@ value, the float64 reference, and the relative error. Includes 8-bit and 16-bit 
 
 ### Taylor Series for e
 
-**`taylorplot.php`** — Accumulates e = sum(1/k!) in each format. Unlike the harmonic
+**`taylorplot.php`** - Accumulates e = sum(1/k!) in each format. Unlike the harmonic
 series this series converges, so stagnation marks the format's permanent best
 approximation to e. The plot shows the partial sums converging toward the true value
 e = 2.71828..., with a red reference line and triangle markers at each format's
@@ -171,7 +171,7 @@ stagnation point. Includes 8-bit and 16-bit modes with adjustable term counts.
 
 ### Alternating Harmonic Series
 
-**`altharmonicplot.php`** — Accumulates ln(2) = 1 - 1/2 + 1/3 - 1/4 + ... in each
+**`altharmonicplot.php`** - Accumulates ln(2) = 1 - 1/2 + 1/3 - 1/4 + ... in each
 format. The running sum is always in (0, 1) so there is no overflow, and the series
 oscillates around ln(2) as it converges. This tests cancellation behaviour: each step
 adds or subtracts a small quantity near a moderate value. Stagnation indicates the
@@ -180,7 +180,7 @@ modes.
 
 ### Chebyshev Node Accuracy
 
-**`chebyplot.php`** — Measures the representational error when each format encodes the
+**`chebyplot.php`** - Measures the representational error when each format encodes the
 Chebyshev nodes of the first kind, x_k = cos((2k-1)*pi / (2N)), on [-1, 1]. These nodes
 cluster near +/-1, which is where Posit and Takum concentrate their precision (tapered
 distribution). The y-axis shows log10 of the absolute error for each node; a lower point
@@ -190,7 +190,7 @@ are available; 8-bit and 16-bit toggle included.
 
 ### ULP Distribution
 
-**`ulpplot.php`** — Log-log plot of the unit in the last place (ULP(x) = next
+**`ulpplot.php`** - Log-log plot of the unit in the last place (ULP(x) = next
 representable value minus x) across the full positive range of each 8-bit format.
 Two modes: relative ULP (ULP(x)/x, where a flat line indicates uniform relative
 precision) and absolute ULP. LNS is the only format with exactly flat relative ULP;
