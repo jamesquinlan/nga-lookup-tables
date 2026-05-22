@@ -279,7 +279,7 @@ To cite this project:
 ```bibtex
 @misc{quinlan2026ngalookup,
   author       = {Quinlan, James},
-  title        = {Numerical Systems Lookup Tables},
+  title        = {Numeric Lookup Tables},
   year         = {2026},
   howpublished = {\url{https://github.com/jamesquinlan/nga-lookup-tables}},
   note         = {GitHub repository}
