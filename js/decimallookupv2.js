@@ -1,5 +1,5 @@
 /**
-* @file My ugly decimal to posit lookup table generator script
+* @file decimal to posit lookup table generator script
 * @copyright Siew Hoon Leong (Cerlane)
 */
 var positMax = {
@@ -484,3 +484,4 @@ function colouredCodedPosit(posit, es){
 	colouredPosit += "<font color='#CC9933'>"+regime+"</font>" + terminateRegime + expo + fraction;
 	return colouredPosit;
 }
+

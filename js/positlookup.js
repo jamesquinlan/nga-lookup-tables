@@ -1,6 +1,7 @@
 /**
- * @file My ugly posit lookup table generator script
+ * @file posit lookup table generator script
  * @copyright Siew Hoon Leong (Cerlane)
+ * new edits 05/07/2026
  */
 function positConvert(){
 	posit = parseInt(document.getElementById("posit").value);
@@ -234,4 +235,5 @@ function checkPosit(val, e_val){
 	else
 		document.getElementById('output').innerHTML = msg;
 }
+
 

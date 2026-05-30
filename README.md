@@ -10,6 +10,9 @@ The Posit lookup and decimal converter tools originate from work by Siew Hoon Le
 
 This project extends those tools and adds support for Float, LNS, and Takum formats along with the analysis pages.
 
+
+[Website Implementation](https://cs.usm.maine.edu/~james.quinlan/ncl/nga-lookups/)
+
 ---
 
 ## Getting Started
@@ -286,6 +289,20 @@ To cite this project:
 }
 ```
 
+Posit format reference:
+
+```bibtex
+@article{gustafson2017beating,
+  title={Beating floating point at its own game: Posit arithmetic},
+  author={Gustafson, John L and Yonemoto, Isaac T},
+  journal={Supercomputing frontiers and innovations},
+  volume={4},
+  number={2},
+  pages={71--86},
+  year={2017}
+}
+
+```
 
 Takum format reference:
 
